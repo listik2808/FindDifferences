@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,9 @@ namespace Scripts
         private float _min;
         private float _sec;
 
+        public float TimerTim => _timeStart;
+
+        public event Action EndTime;
 
         private void Start ()
         {
@@ -23,14 +27,13 @@ namespace Scripts
             if(_timeStart >= 0)
             {
                 _timeStart -= Time.deltaTime;
-                //_textTimer.text = Mathf.Round(_timeStart).ToString();
                 _min = Mathf.FloorToInt(_timeStart / 60);
                 _sec = Mathf.FloorToInt(_timeStart%60);
                 _textTimer.text = string.Format("{0,00}:{1,00}", _min, _sec);
             }
             else
             {
-                enabled = false;
+                EndTime?.Invoke();
             }
         }
     }
