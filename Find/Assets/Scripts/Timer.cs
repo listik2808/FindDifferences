@@ -24,17 +24,22 @@ namespace Scripts
 
         private void FixedUpdate()
         {
-            if(_timeStart >= 0)
+            _timeStart -= Time.deltaTime;
+            if (_timeStart > 0)
             {
-                _timeStart -= Time.deltaTime;
-                _min = Mathf.FloorToInt(_timeStart / 60);
-                _sec = Mathf.FloorToInt(_timeStart%60);
-                _textTimer.text = string.Format("{0,00}:{1,00}", _min, _sec);
+                ShowTime();
             }
             else
             {
                 EndTime?.Invoke();
             }
+        }
+
+        private void ShowTime()
+        {
+            _min = Mathf.FloorToInt(_timeStart / 60);
+            _sec = Mathf.FloorToInt(_timeStart % 60);
+            _textTimer.text = string.Format("{0,00}:{1,00}", _min, _sec);
         }
     }
 }

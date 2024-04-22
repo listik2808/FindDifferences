@@ -60,9 +60,39 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Logic\Spawn.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\LoadLevelState.cs" />
     <Compile Include="Assets\Scripts\ObserverOpenImages.cs" />
+    <Compile Include="Assets\Scripts\Services\SaveLoad\SaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\LevelMessage.cs" />
+    <Compile Include="Assets\Scripts\StaticData\LevelStaticData.cs" />
+    <Compile Include="Assets\Scripts\Services\PersistenProgressServices.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
+    <Compile Include="Assets\Scripts\Data\WorldData.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\IGameFactory.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\AssetManagement\AssetProvider.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\GameFactory.cs" />
+    <Compile Include="Assets\Scripts\StaticData\IStaticDataService.cs" />
+    <Compile Include="Assets\Scripts\Data\PlayerProgress.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\AssetManagement\IAssets.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\GameStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\LoadProgressState.cs" />
+    <Compile Include="Assets\Scripts\GameLevel.cs" />
+    <Compile Include="Assets\Scripts\StaticData\StaticDataService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\GameLoopState.cs" />
+    <Compile Include="Assets\Scripts\Services\IPersistenProgressServices.cs" />
+    <Compile Include="Assets\Scripts\Services\AllServices.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\Game.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\BootstarapState.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\ButtonClicking\ClicButtonUi.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\IState.cs" />
+    <Compile Include="Assets\Scripts\Services\SaveLoad\ISaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\Services\IService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\GameBootstrapper.cs" />
+    <Compile Include="Assets\Scripts\Services\ISavedProgress.cs" />
+    <Compile Include="Assets\Scripts\Services\SaveLoad\SaveOrLoad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
